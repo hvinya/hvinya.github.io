@@ -1,4 +1,5 @@
 import io, os
+from shutil import copy
 
 
 authors = {
@@ -21,8 +22,10 @@ while True:
 
 num = hex(len(os.listdir('poesy')))
 
-os.mkdir('result')
-
+try:
+  os.mkdir('result')
+except:
+  pass
 
 with io.open(f'result/{num}.md', mode='w', encoding='utf-8') as f:
   raw = io.open(file, mode='r', encoding='utf-8').read()
@@ -51,3 +54,9 @@ with io.open(f'result/index.md', mode='w', encoding='utf-8') as f:
 '''
   f.write(index)
   print('Successfully wrote result/index.md')
+
+
+decision = input('Update poesy folder and index.md?[Y/N]: ')
+if decision:
+  copy(f'result/{num}.md', 'poesy/')
+  copy('result/index.md', '.')
