@@ -10,3 +10,7 @@ body {
 h2 {
   color: #dbdbca;
 }
+
+a:visited {
+  color: #f38a8a;
+}
