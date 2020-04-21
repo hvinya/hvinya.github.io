@@ -8,8 +8,9 @@ body {
   color: #f3f3f3;
 }
 
-h2 {
+h1, h2 {
   color: #dbdbca;
+  font-size: xx-large;
 }
 
 a:link {
