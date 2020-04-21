@@ -8,6 +8,10 @@ body {
   color: #f3f3f3;
 }
 
+p {
+  display: inline;
+}
+
 h1, h2 {
   font-size: xx-large;
 }
