@@ -28,6 +28,12 @@ h1 {
   color: #ff40a0;
 }
 
+#image {
+  max-width:50%;
+  max-height:50%;
+  display: block;
+}
+
 a:link {
   color: #f3f0f6;
   text-decoration: none;
