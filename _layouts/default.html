@@ -1,16 +1,1 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico"/>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/fonts.css" type="text/css"/>
-  </head>
-  
-  <body>
-    <a href="https://hvinya.github.io/">&lt;&lt;&lt;</a>
-    {{ content }}
-  </body>
-</html>
+{% include main.html content="{{ content }}" %}
