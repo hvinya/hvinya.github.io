@@ -2,17 +2,11 @@ import io, os
 from shutil import copy
 
 
-authors = {
-  'J': '𝓙',
-  'B': '𝓑'
-}
-
 title = input('Enter poesy title: ')
 
 while True:
-  author = input('Enter author(J/B): ')
-  sign = authors.get(author)
-  if sign:
+  sign = input('Enter author(J/B): ')
+  if sign in 'JB':
     break
 
 while True:
