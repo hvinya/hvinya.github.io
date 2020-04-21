@@ -9,8 +9,19 @@ body {
 }
 
 h1, h2 {
-  color: #dbdbca;
   font-size: xx-large;
+}
+
+h2 {
+  color: #dbdbca;
+}
+
+h1 {
+  color: #ede3f7;
+}
+
+#love {
+  color: #ff40a0;
 }
 
 a:link {
