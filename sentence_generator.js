@@ -21,8 +21,8 @@ function generateText(words, len) {
         // 8% ". "
         // so [0, 11), [11, 19)
         let k = randomInt(100); 
-        let suffix = (k >= 0 && k < 10) ? ", "
-                   : (k >= 11 && k < 19) ? ". "
+        let suffix = (k >= 0 && k < 10) ? ","
+                   : (k >= 11 && k < 19) ? "."
                    : "";
 
         result.push(word + suffix);
