@@ -15,7 +15,7 @@ function randomInt(max) {
 function generateText(words, len) {
     let result = [];
     for (let i = 0; i < len; i++) {
-        let word = words[randomInt(len)];
+        let word = words[randomInt(words.length)];
 
         // 11% ", "
         // 8% ". "
