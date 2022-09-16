@@ -33,5 +33,9 @@ function generateText(words, len) {
 $generate.onclick = () => {
     const len = parseInt($textlen.value);
     if (!Number.isInteger(len)) return;
-    WORDS.then(w => $result.value = generateText(w, len));
+    WORDS.then(w => {
+        const r = generateText(w, len);
+        $result.value = r;
+        navigator.clipboard.writeText(r);
+    });
 };
