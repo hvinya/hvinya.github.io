@@ -1,4 +1,5 @@
 let fixes = 0;
+let result = null;
 
 class Lexer {
     constructor(s) {
@@ -195,8 +196,26 @@ function parse_lines(text) {
     return rs.join("\n");
 }
 
+function download_result() {
+    if (!result) return;
+    const blob = new Blob([result], { type: "application/octet-stream" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "result.csv";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
 document.getElementById("btn-process").addEventListener("click", () => {
     const text = document.getElementById("textarea-input").value;
     fixes = 0;
-    document.getElementById("textarea-output").value = parse_lines(text);
+    result = parse_lines(text);
+    document.getElementById("textarea-output").value = result;
+});
+
+document.getElementById("btn-download").addEventListener("click", () => {
+    download_result();
 });
